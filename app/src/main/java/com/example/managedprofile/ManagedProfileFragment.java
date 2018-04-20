@@ -77,6 +77,18 @@ public class ManagedProfileFragment extends android.app.Fragment
         return null;
     }
 
+    private boolean isAppInstalled(String packageName) {
+        // Get the applicationInfo and add the GET_UNINSTALLED_PACKAGES flag
+        // to allow getting the application information from the list of
+        // uninstalled applications
+
+        // Check the ApplicationInfo of the target app, and see if the flags have
+        // ApplicationInfo.FLAG_INSTALLED turned on using bitwise operation.
+
+        // Wrap this in a try catch with NameNotFoundException exception
+        return false;
+    }
+
     /**
      * Checks if the application is available in this profile.
      *
@@ -123,23 +135,6 @@ public class ManagedProfileFragment extends android.app.Fragment
                 break;
             }
         }
-    }
-
-    private boolean isAppInstalled(String packageName) {
-        // Get the activity the fragment belongs to
-
-
-        // Get the PackageManager and the DevicePolicyManager services
-
-        // Get the applicationInfo and add the GET_UNINSTALLED_PACKAGES flag
-        // to allow getting the application information from the list of
-        // uninstalled applications
-
-        // Check the ApplicationInfo of the target app, and see if the flags have
-        // ApplicationInfo.FLAG_INSTALLED turned on using bitwise operation.
-
-        // Wrap this in a try catch with NameNotFoundException exception
-        return false;
     }
 
     /**
